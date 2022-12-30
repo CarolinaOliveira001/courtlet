@@ -15,8 +15,10 @@ Depends:
     R (>= 4.1),
 Imports:
     dplyr,
-    janitor
+    stringr, 
+    readr
 Suggests: 
     knitr,
     rmarkdown,
-    testthat
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

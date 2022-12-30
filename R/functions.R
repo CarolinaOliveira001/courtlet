@@ -18,6 +18,7 @@ clean_text <- function(court_data, col_of_interest){
   col_of_interest = c()
   for (x in 1:nrow(column)) {
     col_of_interest[x] = gsub("[<p></p>\n]",'', column[x, ])
+    col_of_interest[x] = stringr::str_trim(col_of_interest[x], "both")
   }
 
   data.frame(col_of_interest)
