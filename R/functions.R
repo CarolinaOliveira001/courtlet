@@ -9,20 +9,25 @@
 #'
 #' @examples
 #' clean_text(court_data,
-#'            href)
+#'            "href")
 
 clean_text <- function(court_data, col_of_interest){
-  column <- court_data |>
-    dplyr::select({{col_of_interest}})
+  if (col_of_interest %in% c(names(court_data))){
+    column <- court_data |>
+      dplyr::select({{col_of_interest}})
 
-  col_of_interest = c()
-  for (x in 1:nrow(column)) {
-    col_of_interest[x] = gsub("[<p></p>\n]",'', column[x, ])
-    col_of_interest[x] = stringr::str_trim(col_of_interest[x], "both")
+    col_of_interest = c()
+    for (x in 1:nrow(column)) {
+      col_of_interest[x] = gsub("[<p></p>\n]",'', column[x, ])
+      col_of_interest[x] = stringr::str_trim(col_of_interest[x], "both")
+    }
+
+    result <- data.frame(col_of_interest)
+  } else {
+    warning("The returned data frame is empty. This is likely because the `col_of_interest` argument supplied does not match any name of the columns in the original data.")
+    result <- data.frame(tibble::as_tibble(list(col_of_interest = numeric(0))))
   }
-
-  data.frame(col_of_interest)
+  result
 }
-
 
 

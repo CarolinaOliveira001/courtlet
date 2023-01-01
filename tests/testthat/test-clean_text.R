@@ -1,10 +1,25 @@
-test_that("wrong column", {
+test_that("cleaning a column from the dataset", {
 
-  returned_value <- clean_text(court_data, facts) %>%
+  returned_value <- clean_text(court_data, "facts") %>%
     as.data.frame()
 
   expected_value <- readr::read_csv("test_data_facts.csv") %>%
     as.data.frame()
+
+  expect_equal(returned_value, expected_value)
+
+})
+
+test_that("cleaning a column which is not in the dataset", {
+
+  returned_value <- clean_text(
+    court_data,
+    "judge_name")
+
+  expected_value <- tibble::as_tibble(
+    list("col_of_interest" = numeric(0))) %>%
+    as.data.frame()
+
 
   expect_equal(returned_value, expected_value)
 

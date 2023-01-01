@@ -22,5 +22,5 @@ Some column cells have some unnecessary characters in the beginning or end of
 }
 \examples{
 clean_text(court_data,
-           href)
+           "href")
 }
