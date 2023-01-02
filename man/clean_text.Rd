@@ -4,12 +4,12 @@
 \alias{clean_text}
 \title{Function to remove some html tags function from the supreme court data}
 \usage{
-clean_text(court_data, col_of_interest)
+clean_text(court, col_of_interest)
 }
 \arguments{
-\item{court_data}{A data frame containing details about supreme court cases.}
-
 \item{col_of_interest}{A column of the `court_data` data frame that you wish to clean.}
+
+\item{court_data}{A data frame containing details about supreme court cases.}
 }
 \value{
 A data frame

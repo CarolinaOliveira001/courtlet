@@ -11,9 +11,9 @@
 #' clean_text(court_data,
 #'            "href")
 
-clean_text <- function(court_data, col_of_interest){
-  if (col_of_interest %in% c(names(court_data))){
-    column <- court_data |>
+clean_text <- function(court, col_of_interest){
+  if (col_of_interest %in% c(names(court))){
+    column <- court |>
       dplyr::select({{col_of_interest}})
 
     col_of_interest = c()
