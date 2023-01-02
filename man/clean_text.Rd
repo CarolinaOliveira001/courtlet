@@ -7,9 +7,9 @@
 clean_text(court, col_of_interest)
 }
 \arguments{
-\item{col_of_interest}{A column of the `court_data` data frame that you wish to clean.}
+\item{court}{A data frame containing details about supreme court cases.}
 
-\item{court_data}{A data frame containing details about supreme court cases.}
+\item{col_of_interest}{A column of the `court` data frame that you wish to clean.}
 }
 \value{
 A data frame

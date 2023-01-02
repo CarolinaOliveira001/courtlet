@@ -1,6 +1,6 @@
 #' Function to remove some html tags function from the supreme court data
-#' @param court_data A data frame containing details about supreme court cases.
-#' @param col_of_interest A column of the `court_data` data frame that you wish to clean.
+#' @param court A data frame containing details about supreme court cases.
+#' @param col_of_interest A column of the `court` data frame that you wish to clean.
 #' @importFrom dplyr %>%
 #' @export
 #' @return A data frame

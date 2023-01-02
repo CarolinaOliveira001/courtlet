@@ -12,9 +12,8 @@ test_that("cleaning a column from the dataset", {
 
 test_that("cleaning a column which is not in the dataset", {
 
-  returned_value <- clean_text(
-    court_data,
-    "judge_name")
+  returned_value <- clean_text(court_data, "judge_name")  %>%
+    as.data.frame()
 
   expected_value <- tibble::as_tibble(
     list("col_of_interest" = numeric(0))) %>%
