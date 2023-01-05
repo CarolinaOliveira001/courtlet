@@ -2,7 +2,7 @@
 
 To install the package, please use the following line
 
-devtools::install_github('CarolinaOliveira001/courtlet', ref = 'd3c78e022969604083e75eda7ea211dd8d0ea6e0')
+devtools::install_github('CarolinaOliveira001/courtlet', ref = 'f7f2620a0b25c6d7ddee71e7fd1ef6a3115ff817')
 
 ------------------------------------------------------------
 
