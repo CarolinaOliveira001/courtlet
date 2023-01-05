@@ -17,7 +17,7 @@ clean_text <- function(court, col_of_interest){
       dplyr::select({{col_of_interest}})
 
     col_of_interest = c()
-    for (x in 1:nrow(column)) {
+    for (x in 1:length(column[1])) {
       col_of_interest[x] = gsub("[<></>\n]",' ', column[x, ])
       col_of_interest[x] = gsub(" p ",' ', col_of_interest[x])
       col_of_interest[x] = stringr::str_trim(col_of_interest[x], "both")
