@@ -5,8 +5,8 @@
 #' @export
 #' @return A data frame
 #' @details
-#' Some column cells have some unnecessary characters in the beginning or end of
-#'
+#' This function cleans `col_of_interest` by removing "<p>", "</p>" and "\\n” from each column
+#' cell.
 #' @examples
 #' clean_text(court_data,
 #'            "href")
@@ -16,19 +16,20 @@ clean_text <- function(court, col_of_interest){
     column <- court |>
       dplyr::select({{col_of_interest}})
 
-    col_of_interest = c()
-    for (x in 1:length(column[1])) {
-      col_of_interest[x] = gsub("[<></>\n]",' ', column[x, ])
-      col_of_interest[x] = gsub(" p ",' ', col_of_interest[x])
-      col_of_interest[x] = stringr::str_trim(col_of_interest[x], "both")
+    clean_col_of_interest = c()
+    for (x in 1:length(column[[1]])) {
+      clean_col_of_interest[x] = gsub("[<></>\n]",' ', column[x, ])
+      clean_col_of_interest[x] = gsub(" p ",' ', clean_col_of_interest[x])
+      clean_col_of_interest[x] = stringr::str_trim(clean_col_of_interest[x], "both")
     }
 
-    result <- data.frame(col_of_interest)
+    result <- data.frame(clean_col_of_interest)
   } else {
-    warning("The returned data frame is empty. This is likely because the `col_of_interest` argument supplied does not match any name of the columns in the original data.")
+    warning("The returned data frame is empty. This is likely because the
+            `col_of_interest` argument supplied does not match any name of the
+            columns in the original data.")
     result <- data.frame(tibble::as_tibble(list(col_of_interest = numeric(0))))
   }
   result
 }
-
 

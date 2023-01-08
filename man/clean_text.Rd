@@ -18,7 +18,8 @@ A data frame
 Function to remove some html tags function from the supreme court data
 }
 \details{
-Some column cells have some unnecessary characters in the beginning or end of
+This function cleans `col_of_interest` by removing "<p>", "</p>" and "\\n” from each column
+cell.
 }
 \examples{
 clean_text(court_data,

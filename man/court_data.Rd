@@ -5,7 +5,7 @@
 \alias{court_data}
 \title{U.S. Supreme Court data}
 \format{
-## `who`
+##
 A data frame contains 21 columns and 3303 rows:
 \describe{
   \item{id}{ID of the case}
@@ -19,6 +19,10 @@ A data frame contains 21 columns and 3303 rows:
   \item{facts_len}{Length of `facts` text}
   ...
 }
+}
+\source{
+The data set was found on Kaggle. Here is the link:
+<https://www.kaggle.com/datasets/deepcontractor/supreme-court-judgment-prediction>
 }
 \usage{
 court_data
