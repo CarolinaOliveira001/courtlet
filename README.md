@@ -6,7 +6,7 @@ To install the latest version of this package, please use the following line in 
 
 install.packages("devtools") 
 
-devtools::install_github('CarolinaOliveira001/courtlet', ref = 'f7f2620a0b25c6d7ddee71e7fd1ef6a3115ff817')
+devtools::install_github('CarolinaOliveira001/courtlet', ref = '67b44edb3054bbe132be12849562675076455924')
 
 ------------------------------------------------------------
 
