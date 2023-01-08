@@ -5,8 +5,8 @@
 #' @export
 #' @return A data frame
 #' @details
-#' This function cleans `col_of_interest` by removing "<p>", "</p>" and "\\n” from each column
-#' cell.
+#' This function cleans `col_of_interest` by removing "<p>", "</p>" and "\\n” from
+#' the latter column cell.
 #' @examples
 #' clean_text(court_data,
 #'            "href")
