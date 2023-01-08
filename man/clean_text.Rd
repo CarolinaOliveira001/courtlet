@@ -2,12 +2,12 @@
 % Please edit documentation in R/functions.R
 \name{clean_text}
 \alias{clean_text}
-\title{Function to remove some html tags function from the supreme court data}
+\title{Function to remove some html tags from the Supreme court data}
 \usage{
 clean_text(court, col_of_interest)
 }
 \arguments{
-\item{court}{A data frame containing details about supreme court cases.}
+\item{court}{A data frame containing details about Supreme court cases.}
 
 \item{col_of_interest}{A column of the `court` data frame that you wish to clean.}
 }
@@ -15,11 +15,11 @@ clean_text(court, col_of_interest)
 A data frame
 }
 \description{
-Function to remove some html tags function from the supreme court data
+Function to remove some html tags from the Supreme court data
 }
 \details{
-This function cleans `col_of_interest` by removing "<p>", "</p>" and "\\n” from each column
-cell.
+This function cleans `col_of_interest` by removing "<p>", "</p>" and "\\n” from
+the latter column cells.
 }
 \examples{
 clean_text(court_data,

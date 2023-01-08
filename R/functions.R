@@ -1,12 +1,12 @@
-#' Function to remove some html tags function from the supreme court data
-#' @param court A data frame containing details about supreme court cases.
+#' Function to remove some html tags from the Supreme court data
+#' @param court A data frame containing details about Supreme court cases.
 #' @param col_of_interest A column of the `court` data frame that you wish to clean.
-#' @importFrom dplyr %>%
+#' @import dplyr
 #' @export
 #' @return A data frame
 #' @details
 #' This function cleans `col_of_interest` by removing "<p>", "</p>" and "\\n” from
-#' the latter column cell.
+#' the latter column cells.
 #' @examples
 #' clean_text(court_data,
 #'            "href")

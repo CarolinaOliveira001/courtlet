@@ -6,7 +6,7 @@
 \title{U.S. Supreme Court data}
 \format{
 ##
-A data frame contains 21 columns and 3303 rows:
+This dataframe contains 21 columns and 3303 rows:
 \describe{
   \item{id}{ID of the case}
   \item{docket}{ID of the case used by the legal system}
@@ -28,6 +28,6 @@ The data set was found on Kaggle. Here is the link:
 court_data
 }
 \description{
-A tidy dataset of Supreme Court Case in United States of America.
+A tidy data set of Supreme Court cases in the United States of America.
 }
 \keyword{datasets}

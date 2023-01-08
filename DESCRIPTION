@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Carolina Costa
 Maintainer: The package maintainer <carolina_costa98@hotmail.com>
 Description: This package allows users to easily get data from the Supreme Court 
-    from the United States of America from a raw csv file.
+    of the United States of America from a raw csv file.
 License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
