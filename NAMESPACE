@@ -2,3 +2,4 @@
 
 export(clean_text)
 import(dplyr)
+importFrom(stringr,str_trim)

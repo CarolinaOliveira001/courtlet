@@ -2,6 +2,7 @@
 #' @param court A data frame containing details about Supreme court cases.
 #' @param col_of_interest A column of the `court` data frame that you wish to clean.
 #' @import dplyr
+#' @importFrom stringr str_trim
 #' @export
 #' @return A data frame
 #' @details
@@ -20,6 +21,7 @@ clean_text <- function(court, col_of_interest){
     for (x in 1:length(column[[1]])) {
       clean_col_of_interest[x] = gsub("[<></>\n]",' ', column[x, ])
       clean_col_of_interest[x] = gsub(" p ",' ', clean_col_of_interest[x])
+      clean_col_of_interest[x] = gsub("\\s+", " ", str_trim(clean_col_of_interest[x]))
       clean_col_of_interest[x] = stringr::str_trim(clean_col_of_interest[x], "both")
     }
 
